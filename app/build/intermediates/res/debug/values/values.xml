@@ -265,6 +265,7 @@
     <string name="accept">Accept</string>
     <!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="admobUnitId">ca-app-pub-5656796193616969/9271191938</string>
     <string name="app_name">Vroom Guesser</string>
     <!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/values/auth_strings.xml -->
     <eat-comment/>
@@ -332,7 +333,7 @@ available. Please contact the developer for assistance.</string>
     <string name="howToPlayText">2. An exhaust sound clip will play and you will have to guess
         out of 4 choices what kind of car it is.</string>
     <string name="howToPlayText0">1. There are 25 rounds, in which 25 of the 51 cars will be randomly chosen for each game.</string>
-    <string name="howToPlayText2">3. You have 3 lives and 2 skips. If you choose the wrong answer,  you will lose 
+    <string name="howToPlayText2">3. You have 3 lives and 2 skips. If you choose the wrong answer,  you will lose
         a life. If you use a skip, you will lose a point from your score (negative score is possible).</string>
     <string name="howToPlayText3"><b>Notes:</b></string>
     <string name="howToPlayText4">- Sometimes cars of the same make have really similar exhaust notes, so each

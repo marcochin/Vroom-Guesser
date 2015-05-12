@@ -66,9 +66,8 @@ public class GameFragment extends Fragment implements OnClickListener,
 	private String saveRound, saveYourScore, saveLives, saveHighScore,
 			saveSkips;
 
-	private String[] fourChoices, savedSoundSequence; // array to hold data
-														// gotten from saved
-														// game
+	// array to hold data gotten from saved game
+	private String[] fourChoices, savedSoundSequence;
 	Random rand;
 
 	@Override
@@ -84,14 +83,11 @@ public class GameFragment extends Fragment implements OnClickListener,
 		//TODO put progress dialog if long load time
 
 		myFormatter = new DecimalFormat("00");
-		soundResource = new ArrayList<>(51); // IF YOU ADD MORE CARS
-													// CHANGE THIS
-		answerKey = new SparseArray<>(51); // IF YOU ADD MORE CARS CHANGE
-													// THIS
+		soundResource = new ArrayList<>(51); // IF YOU ADD MORE CARS CHANGE THIS
+		answerKey = new SparseArray<>(51); // IF YOU ADD MORE CARS CHANGE THIS
 		pictureKey = new SparseIntArray();
 		answerChoices = new ArrayList<>(4); // 4 choices to choose from
-		carAnswerPool = new ArrayList<>(51); // IF YOU ADD MORE CARS
-													// CHANGE THIS
+		carAnswerPool = new ArrayList<>(51); // IF YOU ADD MORE CARS CHANGE THIS
 		rand = new Random();
 
 		listOfCars = new String[] {
@@ -257,13 +253,11 @@ public class GameFragment extends Fragment implements OnClickListener,
 		populatePictureKey();
 
 		for (int i = 0; i < answerKey.size(); i++) {
-			carAnswerPool.add(answerKey.valueAt(i)); // transfer values to the
-														// carAnswerPool so it
-														// can be shuffled for
-														// answerChoices
-			soundResource.add(answerKey.keyAt(i)); // transfer keys to
-													// soundResource to be
-													// shuffled for new game
+			// transfer values to the carAnswerPool so it can be shuffled for answerChoices
+			carAnswerPool.add(answerKey.valueAt(i));
+
+			// transfer keys to soundResource to be shuffled for new game
+			soundResource.add(answerKey.keyAt(i));
 		}
 
 		// Try to load save game is there is one
@@ -382,31 +376,31 @@ public class GameFragment extends Fragment implements OnClickListener,
 		}
 		if (exhaust != null) {
 			exhaust.release(); // end state
-			exhaust = null; // cant use exhaust variable as media player until
-							// it is null??
+			exhaust = null; // cant use exhaust variable as media player until it is null??
 		}
 		super.onPause();
 	}
 
 	@Override
-	public void onStop() {// save if activity goes out of view
+	public void onStop() {
 		super.onStop();
+
+		// save if activity goes out of view
 		saveRound = Integer.toString(round);
 		saveYourScore = tvYourScoreValue.getText().toString();
 		saveLives = tvLivesValue.getText().toString();
 		saveSkips = tvSkipsValue.getText().toString();
 
-		String saveAnswerChoices = "";// reset string or it will keep appending and
-								// messing up! ah headache
+		// reset string or it will keep appending and messing up!
+		String saveAnswerChoices = "";
+
 		for (RadioButton choice : rbCar) {
-			saveAnswerChoices += (choice.getText().toString() + "~");// ~ is the
-																		// delimiter
+			saveAnswerChoices += (choice.getText().toString() + "~"); // ~ is the delimiter
 		}
 
 		String saveSoundSequence = "";
 		for (int sound : soundResource) {
-			saveSoundSequence += (Integer.toString(sound) + "~");// ~ is the
-																	// delimiter
+			saveSoundSequence += (Integer.toString(sound) + "~");// ~ is the delimiter
 		}
 
 		DbHelper ourDB = new DbHelper(getActivity());
@@ -478,14 +472,13 @@ public class GameFragment extends Fragment implements OnClickListener,
 				t.setView(view);
 				t.show();
 
-				int skips = Integer.parseInt(tvSkipsValue.getText().toString()); // minus
-																					// 1
-																					// skip
+				// minus 1 skip
+				int skips = Integer.parseInt(tvSkipsValue.getText().toString());
 				skips--;
 				tvSkipsValue.setText(Integer.toString(skips));
 
-				int score = Integer.parseInt(tvYourScoreValue.getText()
-						.toString()); // minus 1 point
+				// minus 1 point
+				int score = Integer.parseInt(tvYourScoreValue.getText().toString());
 				score--;
 				tvYourScoreValue.setText(Integer.toString(score));
 
@@ -508,10 +501,14 @@ public class GameFragment extends Fragment implements OnClickListener,
 
 				if (answer.equals(rbCar[rgCars.getCheckedRadioButtonId()]
 						.getText().toString())) {
-					addToScore(); // add to Score
+
+					// add to Score
+					addToScore();
 					CorrectDialog cd = new CorrectDialog();
 					cd.setCancelable(false);
-					cd.show(manager, "cd"); // adds fragment to the manager
+					// adds fragment to the manager
+					cd.show(manager, "cd");
+
 				} else {
                     //TODO subtract life, to debug comment out either of these two lines
 					int minusLife = Integer.parseInt(tvLivesValue.getText().toString()) - 1;
@@ -579,10 +576,9 @@ public class GameFragment extends Fragment implements OnClickListener,
 				soundResource.add(Integer.parseInt(sound));
 			}
 
-			answer = answerKey.get(soundResource.get(round - 1)); // store
-																	// answer
-																	// from
-																	// answerkey
+			// store answer from answer-key
+			answer = answerKey.get(soundResource.get(round - 1));
+
 		} else {
 			if (isFirstGame) {
                 //this is to determine if we should show the volume toast or not
@@ -620,58 +616,42 @@ public class GameFragment extends Fragment implements OnClickListener,
 				answerChoices.clear();
 			}
 
-			answer = answerKey.get(soundResource.get(round - 1)); // store
-																	// answer
-																	// from
-																	// answerkey
+			// store answer from answer-key
+			answer = answerKey.get(soundResource.get(round - 1));
 			answerChoices.add(answer);
 
-			String[] extractMakeFromAnswer = answer.split("\\s"); // index 1 is
-																	// the make
+			// index 1 is the make
+			String[] extractMakeFromAnswer = answer.split("\\s");
 
-			Collections.shuffle(carAnswerPool); // shuffle and take 3 cars from
-												// a random position
+			// shuffle and take 3 cars from a random position
+			Collections.shuffle(carAnswerPool);
 
 			String car;
 			String[] extractMakeFromCar, extractMakeFromrb;
 			Boolean validrb = false;
 
-			for (int i = 1; i <= 3; i++) { // 1-2-3 to fill in the other 3
-											// choices
+			// 1-2-3 to fill in the other 3 choices
+			for (int i = 1; i <= 3; i++) {
 
 				do {
-					int carAnswerCount = rand.nextInt(51); // get a random car
-															// out of the number
-															// of cars //IF YOU
-															// ADD MORE CARS
-															// CHANGE THIS
+					// get a random car out of the number of cars
+					// IF YOU ADD MORE CARS CHANGE THIS
+					int carAnswerCount = rand.nextInt(51);
 					car = carAnswerPool.get(carAnswerCount);
 					extractMakeFromCar = car.split("\\s");
 
 					// answer cant have same make as other choices
 					// continue if same make
-					if (!extractMakeFromCar[1].equals(extractMakeFromAnswer[1])) { // carmake
-																					// cant
-																					// equal
-																					// caranswer
+					if (!extractMakeFromCar[1].equals(extractMakeFromAnswer[1])) {
 						if (i >= 2) {
-							for (int j = 1; j <= i - 1; j++) { // 3rd rb compare
-																// to 2nd, 4th
-																// rb compare to
-																// 2 and 1
+							// 3rd radio-button compare to 2nd, 4th radio-button compare to 2 and 1
+							for (int j = 1; j <= i - 1; j++) {
 								extractMakeFromrb = answerChoices.get(j).split(
 										"\\s");
 
-                                //past rb'
+								// past radio-button's cant equal the new radio-button either
 								if (!extractMakeFromrb[1]
-										.equals(extractMakeFromCar[1])) { // past
-																			// rb's
-																			// cant
-																			// equal
-																			// the
-																			// new
-																			// rb
-																			// either
+										.equals(extractMakeFromCar[1])) {
 									validrb = true;
 								} else {
 									validrb = false;
@@ -704,11 +684,13 @@ public class GameFragment extends Fragment implements OnClickListener,
 				soundResource.get(round - 1)); // create sound from the round #
 
 		// Setting the time of the soundclip
-		exhaustDuration = exhaust.getDuration(); // need duration for
-													// onprogresschanged
+		// need duration for onProgressChanged()
+		exhaustDuration = exhaust.getDuration();
+
+		// set textview duration for seekbar
 		int seconds = exhaustDuration / 1000;
 		String output = myFormatter.format(seconds);
-		String duration = "00:" + output; // set textview duration for seekbar
+		String duration = "00:" + output;
 
 		tvProgressTime.setText("00:00");
 		tvDurationTime.setText(duration);
@@ -721,8 +703,8 @@ public class GameFragment extends Fragment implements OnClickListener,
 			exhaust.setLooping(true);
 		}
 
-		if (isFromDialog && round != 1) { // auto play the sound when you skip
-											// or confirm
+		// auto play the sound when you skip or confirm
+		if (isFromDialog && round != 1) {
 			thread = null;
 			isFromDialog = false;
 			playExhaust();
@@ -904,15 +886,16 @@ public class GameFragment extends Fragment implements OnClickListener,
 					}
 					isSkipped = false;
 				}
-
-				thread = null;// only one thread at a time
-			} catch (Exception e) { // in case something happens run the cleanup
-									// code again
+				// only one thread at a time
+				thread = null;
+			} catch (Exception e) { // in case something happens run the cleanup code again
 				isSkipped = false;
 
-                showPlayHidePauseDelegate(); // if playing and hits power button, it will change pause to play
+				// if playing and hits power button, it will change pause to play
+                showPlayHidePauseDelegate();
 
-				seekBar.setProgress(0); // reset to 0 if hit power button/home
+				// reset to 0 if hit power button/home
+				seekBar.setProgress(0);
 				resetProgressTime();
 				e.printStackTrace();
 			}

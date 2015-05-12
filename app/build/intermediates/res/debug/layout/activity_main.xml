@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 ads:adSize="SMART_BANNER"
-                ads:adUnitId="ca-app-pub-5656796193616969/9271191938"
+                ads:adUnitId="@string/admobUnitId"
                 android:visibility="@integer/vroom_ad_visibility"/>
         </LinearLayout>
 
