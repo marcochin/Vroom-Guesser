@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/values-sw700dp-notlong/dimens.xml -->
+    <eat-comment/>
+    <integer name="vroom_ad_visibility">2</integer>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/values-sw700dp-notlong-hdpi/dimens.xml -->
+    <eat-comment/>
+    <dimen name="vroom_bottom_section_top_margin">25dp</dimen>
+    <dimen name="vroom_button_text_size">23sp</dimen>
+    <dimen name="vroom_dialog_button_text_size">25sp</dimen>
+    <dimen name="vroom_dialog_image_height">300dp</dimen>
+    <dimen name="vroom_dialog_image_width">600dp</dimen>
+    <dimen name="vroom_dialog_text_size">25sp</dimen>
+    <dimen name="vroom_labels_bottom_margin">40dp</dimen>
+    <dimen name="vroom_media_button_height">55dp</dimen>
+    <dimen name="vroom_media_button_width">55dp</dimen>
+    <dimen name="vroom_media_buttons_bottom_margin">35dp</dimen>
+    <dimen name="vroom_media_buttons_right_margin">75dp</dimen>
+    <dimen name="vroom_media_buttons_top_margin">10dp</dimen>
+    <dimen name="vroom_normal_text_size">20sp</dimen>
+    <dimen name="vroom_radio_button_bottom_margin">60dp</dimen>
+    <dimen name="vroom_radio_button_text_size">21sp</dimen>
+    <dimen name="vroom_radio_group_bottom_margin">0dp</dimen>
+    <dimen name="vroom_round_bottom_margin">20dp</dimen>
+    <dimen name="vroom_round_number_text_size">25sp</dimen>
+    <dimen name="vroom_seekbar_bottom_margin">20dp</dimen>
+    <dimen name="vroom_seekbar_top_margin">10dp</dimen>
+    <dimen name="vroom_skip_confirm_top_margin">0dp</dimen>
+</resources>

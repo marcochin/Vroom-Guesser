@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2 is GONE, so need to manipulate height-->
+    <integer name="vroom_ad_visibility">2</integer>
+</resources>

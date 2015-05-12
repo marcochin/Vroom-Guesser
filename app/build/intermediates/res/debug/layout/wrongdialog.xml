@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/tvWrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/wrong"
+        android:textColor="@color/dialog_bad_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <View
+        android:id="@+id/wrongDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvWrong"
+        android:layout_marginBottom="5dp"
+        android:background="@color/dialog_divider_color" />
+
+    <TextView
+        android:id="@+id/tvMinusLife"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrongDivider"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/minusLife"
+        android:textColor="@color/dialog_bad_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <TextView
+        android:id="@+id/tvCorrectAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMinusLife"
+        android:gravity="center_horizontal"
+        android:text="@string/theCorrectAsnwerWas"
+        android:textColor="@color/dialog_normal_text_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <TextView
+        android:id="@+id/tvCorrectAnswerValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCorrectAnswer"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/dialog_bad_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <View
+        android:id="@+id/wrongDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvCorrectAnswerValue"
+        android:layout_marginTop="5dp"
+        android:background="@color/dialog_divider_color" />
+
+    <Button
+        android:id="@+id/bNextRoundWrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wrongDivider2"
+        android:background="@drawable/blackblue"
+        android:text="@string/nextRound"
+        android:textColor="@color/dialog_normal_text_color"
+        android:textSize="@dimen/vroom_dialog_button_text_size"/>
+
+</RelativeLayout><!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/layout/wrongdialog.xml -->

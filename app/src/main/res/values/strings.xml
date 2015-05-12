@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vroom Guesser</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="menu">
+        <item>New Game</item>
+        <item>Practice Mode</item>
+        <item>How to Play</item>
+        <item>About</item>
+        <item>Resume Game</item>
+    </string-array>
+
+    <string name="lives">Lives:\u0020</string>
+    <string name="skips">Skips:\u0020</string>
+    <string name="highScore">High Score:\u0020</string>
+    <string name="yourScore">Your Score:\u0020</string>
+    <string name="finalScore">Final Score:\u0020</string>
+    <string name="round">Round\u0020</string>
+    <string name="bSkip">Skip</string>
+    <string name="bConfirm">Confirm</string>
+    <string name="nextRound">Touch Here For Next Round</string>
+    <string name="toContinue">Touch Here To Continue</string>
+    <string name="toEnd">Touch Here To End</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong!</string>
+    <string name="minusLife">-1 Life</string>
+    <string name="gameOver">Game Over!</string>
+    <string name="newgame">Start a New Game?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="theCorrectAsnwerWas">The Correct Answer was:</string>
+    <string name="youWin">You Win!</string>
+    <string name="congrats">Congratulations, you have reached the end without crashing. You are a true car enthusiast!\n\n
+        Thanks for playing.\n Until next time, remember&#8230;\n \"Ride or Die\".</string>
+    <string name="notagame">\"&#8230;not a game,</string>    
+    <string name="practicemode">we talking about practice.\"</string>
+    <string name="practiceDialog">Entering practice mode will end your current game. Continue?</string>
+    
+    <string name="aboutText">\u0020 \u0020 \u0020 Hi all, I created this app for the car 
+        enthusiast in mind and even if you\'re not, hopefully you will still enjoy it. </string>
+    <string name="aboutText2">\u0020 \u0020 \u0020  First off, I would like to thank SaabKyle04, LLC on YouTube for giving me the permission 
+        to use sound samples and screenshots from his videos. You can visit his channel at:</string>
+    <string name="aboutText25">https://www.youtube.com/user/saabkyle04 .</string>
+    <string name="aboutText3">\u0020 \u0020 \u0020 This app is designed to help you identify cars, not with pictures, 
+        but by what sound it makes! The idea arose when I watched a video of some WRC drivers guessing exhaust sounds created by the interviewer\'s own mouth.
+        I really wanted to make an app related to cars in some way and thus created this sound guessing game.
+        So the next time a car drives by, maybe you can flex some of your car knowledge and impress some of your friends.</string>
+    <string name="aboutText4">Anyways, <b>Thanks for Downloading!</b></string>
+
+    <string name="aboutText5">Ending song: Klayplex - Jump \n\nIcons provided by icons8.com</string>
+    <string name="aboutText6">https://www.youtube.com/watch?v=Q79ts2h_PR8</string>
+    
+    <string name="openNav">Open Navigation Menu</string>
+    <string name="closeNav">Close Navigation Menu</string>
+    
+    <string name="howToPlayText0">1. There are 25 rounds, in which 25 of the 51 cars will be randomly chosen for each game.</string>
+    <string name="howToPlayText">2. An exhaust sound clip will play and you will have to guess
+        out of 4 choices what kind of car it is.</string>
+    <string name="howToPlayText2">3. You have 3 lives and 2 skips. If you choose the wrong answer,  you will lose
+        a life. If you use a skip, you will lose a point from your score (negative score is possible).</string>
+    
+    <string name="howToPlayText3"><b>Notes:</b></string>
+        
+    <string name="howToPlayText4">- Sometimes cars of the same make have really similar exhaust notes, so each
+        answer choice will always have a car from a unique make.\n\n
+        - Exhaust notes are sampled from stock cars (as far as I know).\n\n</string>
+
+
+    <string name="admobUnitId">YOUR_ADMOB_UNIT_ID</string>
+
+</resources>

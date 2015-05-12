@@ -1,0 +1,50 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dlDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@android:color/white"/>
+
+            <RelativeLayout
+                android:id="@+id/rlMainContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </RelativeLayout>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/avBottomAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-5656796193616969/9271191938"
+                android:visibility="@integer/vroom_ad_visibility"/>
+        </LinearLayout>
+
+    <!-- The navigation drawer -->
+
+    <ListView
+        android:id="@+id/lvDrawerList"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+</android.support.v4.widget.DrawerLayout><!-- From: file:/C:/Users/Marco/AndroidStudioProjects/Vroom/app/src/main/res/layout/activity_main.xml -->

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/tvYouWin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/youWin"
+        android:background="@color/dialog_good_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <View
+        android:id="@+id/youWinDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvYouWin"
+        android:layout_marginBottom="5dp"
+        android:background="@color/dialog_divider_color" />
+
+    <TextView
+        android:id="@+id/tvCongrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/youWinDivider"
+        android:gravity="center_horizontal"
+        android:text="@string/congrats"
+        android:textColor="@color/dialog_normal_text_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <TextView
+        android:id="@+id/tvYouWinScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCongrats"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/finalScore"
+        android:textColor="@color/dialog_normal_text_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <TextView
+        android:id="@+id/tvYouWinScoreValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvYouWinScore"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/dialog_good_color"
+        android:textSize="@dimen/vroom_dialog_text_size" />
+
+    <View
+        android:id="@+id/youWinDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvYouWinScoreValue"
+        android:layout_marginTop="5dp"
+        android:background="@color/dialog_divider_color" />
+
+    <Button
+        android:id="@+id/bYouWinEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/youWinDivider2"
+        android:background="@drawable/blackblue"
+        android:text="@string/toEnd"
+        android:textColor="@color/dialog_normal_text_color"
+        android:textSize="@dimen/vroom_dialog_button_text_size"/>
+
+</RelativeLayout><!-- From: file:/C:/Users/Marco/AndroidStudioProjects/Vroom/app/src/main/res/layout/finishgamedialog.xml -->

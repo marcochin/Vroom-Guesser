@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="415dp" >
+
+    <LinearLayout
+        android:id="@+id/llPracticeRounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notagame"
+            android:textColor="#33B5E5"
+            android:textSize="@dimen/vroom_round_number_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/practicemode"
+            android:textColor="#33B5E5"
+            android:textSize="@dimen/vroom_round_number_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPracticeSeekerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llPracticeRounds"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/tvPracticeProgressTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="00:00"
+            android:textSize="@dimen/vroom_normal_text_size"/>
+
+        <SeekBar
+            android:id="@+id/sbPracticeExhaustSound"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tvPracticeDurationTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="00:00"
+            android:textSize="@dimen/vroom_normal_text_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPracticeMediaControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llPracticeSeekerBar"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/vroom_media_buttons_right_margin"
+            android:layout_marginEnd="@dimen/vroom_media_buttons_right_margin">
+
+            <Button
+                android:id="@+id/bPracticePlay"
+                android:layout_width="@dimen/vroom_media_button_width"
+                android:layout_height="@dimen/vroom_media_button_height"
+                android:background="@drawable/play" />
+
+            <Button
+                android:id="@+id/bPracticePause"
+                android:layout_width="@dimen/vroom_media_button_width"
+                android:layout_height="@dimen/vroom_media_button_height"
+                android:background="@drawable/pause"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bPracticeStop"
+            android:layout_width="@dimen/vroom_media_button_width"
+            android:layout_height="@dimen/vroom_media_button_height"
+            android:background="@drawable/stop"
+            android:layout_marginRight="@dimen/vroom_media_buttons_right_margin"
+            android:layout_marginEnd="@dimen/vroom_media_buttons_right_margin"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/bPracticeRepeat"
+                android:layout_width="@dimen/vroom_media_button_width"
+                android:layout_height="@dimen/vroom_media_button_height"
+                android:background="@drawable/repeat"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bPracticeRepeatNegate"
+                android:layout_width="@dimen/vroom_media_button_width"
+                android:layout_height="@dimen/vroom_media_button_height"
+                android:background="@drawable/repeatnegate" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svPracticergCars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llPracticeMediaControls"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="13dp"
+        android:fadeScrollbars="false" >
+
+        <RadioGroup
+            android:id="@+id/rgPracticeCars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </RadioGroup>
+    </ScrollView>
+
+</RelativeLayout><!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/layout/practicemode.xml -->

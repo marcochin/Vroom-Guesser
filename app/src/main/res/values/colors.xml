@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialog_normal_text_color">@android:color/white</color>
+    <color name="dialog_divider_color">@android:color/white</color>
+    <color name="dialog_good_color">#01DFA5</color>
+    <color name="dialog_bad_color">#FF0040</color>
+</resources>

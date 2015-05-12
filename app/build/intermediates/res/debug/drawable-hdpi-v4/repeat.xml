@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_action_repeat_over_video" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/ic_action_repeat_over_video_black" android:state_focused="true"></item>
+    <item android:drawable="@drawable/ic_action_repeat_over_video_black"></item>
+
+</selector><!-- From: file:/C:/Users/Marco/AndroidStudioProjects/VroomGuesser/app/src/main/res/drawable-hdpi/repeat.xml -->
