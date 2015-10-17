@@ -14,6 +14,13 @@ You will be able to train, sharpen, and master your exhaust listening ears.
 Can you guess them all?
 Includes "Practice Mode" where you can listen and study each exhaust sound.
 
+<ul>
+<li>Sounds and audio are recorded and ripped using Audacity Audio Editor for clarity and compactness of each file.</li>
+<li>Stores lives, current round, and other game info in a <code>SQLite</code> database to be retreived when a user returns to the game.</li>
+<li>Uses the Android <code>MediaPlayer</code> Api to play, pause, stop and loop a track in accordance with it state machine.</li>
+<li>Incorporates a <code>NavigationDrawer</code> for quick access to the menu and browsing through other areas of the game.</li>
+</ul>
+
 ---
 
 ###Preview
